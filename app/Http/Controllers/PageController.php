@@ -10,9 +10,9 @@ class PageController extends Controller
     {
         return view('welcome');
     }
-    public function aboutPAge()
+    public function blogPAge()
     {
-        return view('about');
+        return view('blog');
     }
     public function infoPage()
     {

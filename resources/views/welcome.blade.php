@@ -31,9 +31,12 @@
                 height: 100vh;
                 margin: 0;
             }
-
+            .active{
+                border-bottom: 4px solid #636b6f;
+            
+            }
             .full-height {
-                height: 100vh;
+                /* height: 100vh; */
             }
 
             .flex-center {
@@ -73,6 +76,9 @@
             .m-b-md {
                 margin-bottom: 30px;
             }
+            .welcome_box h2{
+                text-align: center;
+            }
         </style>
     </head>
     <body>
@@ -84,11 +90,14 @@
                 </div>
 
                 <div class="links">
-                    <a href="https://laravel.com/docs">Home</a>
-                    <a href="https://laracasts.com">Blog</a>
-                    <a href="https://laravel-news.com">About</a>
+                    <a class="{{ Route::currentRouteName() === 'home'? 'active': '' }}" href="{{ route('home') }}">Home</a>
+                    <a  class="{{ Route::currentRouteName() === 'blog'? 'active': '' }}" href="{{ route('blog') }}">Blog</a>
+                    <a class="{{ Route::currentRouteName() === 'info'? 'active': '' }}" href="{{ route('info') }}">Info</a>
                 </div>
             </div>
+        </div>
+        <div class="welcome_box">
+            @yield('welcome-content')
         </div>
     </body>
 </html>
