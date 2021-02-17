@@ -79,6 +79,14 @@
             .welcome_box h2{
                 text-align: center;
             }
+            .blog_box{
+                width: 80%;
+                margin: auto;
+                padding: 1rem;
+            }
+            .blog_box h4{
+                text-align: center;
+            }
         </style>
     </head>
     <body>
